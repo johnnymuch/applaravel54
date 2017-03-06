@@ -36,10 +36,11 @@ Route::get('/student', 'StudentController@index');
 // 		echo "Hello";
 // 	});
 // });
-
-Route::group(['prefix' => 'auth'], function () {
-    Route::get('/', 'UserController@index');
-    Route::get('/role', 'UserController@role');
-    Route::get('/permission', 'UserController@permission');
-   
+Route::group(['middleware' => 'auth'], function () {
+	Route::group(['prefix' => 'auth'], function () {
+	    Route::get('/', 'UserController@index');
+	    Route::get('/role', 'UserController@role');
+	    Route::get('/permission', 'UserController@permission');
+	   
+	});
 });
