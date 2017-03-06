@@ -10,13 +10,15 @@
 					<th>Email</th>
 					<th>Action</th>
 				</tr>
-				@forearch($users as $user)
+				@php $i = 1; @endphp
+				@foreach($users as $select)
 					<tr>
-						<td>echo $user->name;</td>
-						<td></td>
-						<td></td>
+						<th>{{$i++}}</th>
+						<th>{{$select->name}}</th>
+						<th>{{$select->email}}</th>
 					</tr>
-				@endforearch
+			
+				@endforeach
 			</table>
 		</div>
 	</div>
