@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	{!! Html::style('css/bower_cononents.bootstrap.bootstrap.min.js') !!}
-	
-</head>
-<body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+     <link href="/css/style.css" rel="stylesheet">
 
-	
-</body>
-</html>
+    <title>Minimum Bootstrap HTML Skeleton</title>
+<!--  -->
+<style>
+
+</style>
+
+</head>
+
+<body>
