@@ -38,5 +38,8 @@ Route::get('/student', 'StudentController@index');
 // });
 
 Route::group(['prefix' => 'auth'], function () {
-    Route::get('index', 'UserController@index');
+    Route::get('/', 'UserController@index');
+    Route::get('/role', 'UserController@role');
+    Route::get('/permission', 'UserController@permission');
+   
 });

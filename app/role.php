@@ -11,5 +11,7 @@ class role extends Model
 	use NtrustRoleTrait;
 	
 	protected static $roleProfile = 'user';
+
+	protected $table ='roles';
 	
 }
