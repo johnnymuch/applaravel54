@@ -26,5 +26,17 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/student', 'StudentController@index');
 
-Route::get('api/todo', ['uses' => 'TodoController@index','middleware'=>'simpleauth']);
-Route::post('api/todo', ['uses' => 'TodoController@store','middleware'=>'simpleauth']);
+//Route::get('api/todo', ['uses' => 'TodoController@index','middleware'=>'simpleauth']);
+//Route::post('api/todo', ['uses' => 'TodoController@store','middleware'=>'simpleauth']);
+
+
+// user role
+// Route::group(["middleware"=>"user"], function(){
+// 	Route::get('index', functin(){
+// 		echo "Hello";
+// 	});
+// });
+
+Route::group(['prefix' => 'auth'], function () {
+    Route::get('index', 'UserController@index');
+});
