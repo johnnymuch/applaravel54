@@ -33,8 +33,11 @@ Route::group(['middleware' => 'auth'], function ()
 	    Route::get('/usercreate', 'UserController@userCreate');
 	    Route::get('/permission', 'UserController@permission');	   
 	    Route::post('/userstore', 'UserController@userStore');
-	    	   
+
 	    Route::get('/rolecreate', 'UserController@roleCreate');	   
-	    Route::post('/rolestore', 'UserController@roleStore');	   
+	    Route::post('/rolestore', 'UserController@roleStore');
+
+	    Route::get('/permissioncreate', 'UserController@permissionCreate');   
+	    Route::get('/permissionstore', 'UserController@permissionStore');   
 	});
 });

@@ -66,4 +66,22 @@ class UserController extends Controller
 		return redirect('/auth/role')->with('sucess','Sucessfully');
 	}
 	//end role create
+
+	//start permission create
+	public function permissionCreate()
+	{
+		return view('auth.permissioncreate');
+	}
+	public function permissionStore(Request $request)
+	{
+		$this->validate($request, [
+				'name' => 'required|unique:permissions',
+				'display_name' => 'required|unique:permissions',
+				'description' => 'required'
+			]);
+		$input = $request->all();
+		Permission::create($input);
+		return redirect('/auth/permission')->with('sucess','Sucessfully');
+	}
+	//end persmission create
 }
