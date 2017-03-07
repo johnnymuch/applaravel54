@@ -19,28 +19,22 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/login', 'LoginController@index');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
 Route::get('/student', 'StudentController@index');
 
-//Route::get('api/todo', ['uses' => 'TodoController@index','middleware'=>'simpleauth']);
-//Route::post('api/todo', ['uses' => 'TodoController@store','middleware'=>'simpleauth']);
-
-
-// user role
-// Route::group(["middleware"=>"user"], function(){
-// 	Route::get('index', functin(){
-// 		echo "Hello";
-// 	});
-// });
-Route::group(['middleware' => 'auth'], function () {
-	Route::group(['prefix' => 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () 
+{
+	Route::group(['prefix' => 'auth'], function () 
+	{
 	    Route::get('/', 'UserController@index');
 	    Route::get('/role', 'UserController@role');
-	    Route::get('/permission', 'UserController@permission');
-	   
+	    Route::get('/usercreate', 'UserController@userCreate');
+	    Route::get('/permission', 'UserController@permission');	   
+	    Route::post('/userstore', 'UserController@userStore');
+	    	   
+	    Route::get('/rolecreate', 'UserController@roleCreate');	   
+	    Route::post('/rolestore', 'UserController@roleStore');	   
 	});
 });

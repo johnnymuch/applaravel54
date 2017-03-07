@@ -2,7 +2,13 @@
 @section('content')
 	<div class="container">
 		<div class="row">
-			<h2>User Role</h2>
+			<div class="pull-left"> <h3>User</h3></div>
+			<div class="pull-right"><h3><a href="{{ url('auth/usercreate')}}">Create New Users</a></h3></div>
+			@if (session('status'))
+			    <div class="alert alert-success">
+			        {{ session('status') }}
+			    </div>
+			@endif
 			<table class="table table-striped">
 				<tr>
 					<th>ID</th>
@@ -16,6 +22,11 @@
 						<th>{{$i++}}</th>
 						<th>{{$select->name}}</th>
 						<th>{{$select->email}}</th>
+						<th>
+							<a class="btn btn-sm btn-success"><i class="glyphicon glyphicon-edit"></i></a>
+							<a class="btn btn-sm btn-info"><i class="glyphicon glyphicon-eye-open"></i></a>
+							<a class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+						</th>
 					</tr>
 			
 				@endforeach

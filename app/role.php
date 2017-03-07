@@ -13,5 +13,9 @@ class role extends Model
 	protected static $roleProfile = 'user';
 
 	protected $table ='roles';
+
+	 protected $fillable = [
+        'name', 'display_name', 'description',
+    ];
 	
 }

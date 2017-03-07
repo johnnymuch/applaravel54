@@ -16,6 +16,11 @@
 						<th>{{$i++}}</th>
 						<th>{{$permission->name}}</th>
 						<th>{{$permission->display_name}}</th>
+						<th>
+							<a class="btn btn-sm btn-info"><i class="glyphicon glyphicon-eye-open"></i></a>
+							<a class="btn btn-sm btn-success"><i class="glyphicon glyphicon-edit"></i></a>				
+							<a class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
+						</th>
 					</tr>
 			
 				@endforeach

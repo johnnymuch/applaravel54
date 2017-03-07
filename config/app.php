@@ -168,6 +168,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Klaravel\Ntrust\NtrustServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -177,6 +178,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+	    Zizaco\Entrust\EntrustServiceProvider::class,
 
     ],
 
@@ -228,6 +230,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
 		'Ntrust' => Klaravel\Ntrust\NtrustFacade::class,
+		'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
