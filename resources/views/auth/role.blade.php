@@ -24,7 +24,7 @@
 						<th>{{$role->display_name}}</th>
 						<th>{{$role->description}}</th>
 						<th>
-							<a class="btn btn-sm btn-info"><i class="glyphicon glyphicon-eye-open"></i></a>
+							<a class="btn btn-sm btn-info" href="{{ url('auth/roleshow'.'/'.$role->id) }}"><i class="glyphicon glyphicon-eye-open"></i></a>
 							<a class="btn btn-sm btn-success" href="{{ url('auth/roleedit'.'/'.$role->id) }}"><i class="glyphicon glyphicon-edit"></i></a>
 							<a class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
 						</th>

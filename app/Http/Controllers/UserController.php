@@ -144,5 +144,31 @@ class UserController extends Controller
 		$roles = Role::find($id);
 		return view('auth.roleupdate',compact('roles'));
 	}
-	
+	public function roleUpdate(Request $request, $id)
+	{
+		$this->validate($request, [
+			 	'name' => 'required|unique:roles',
+			 	'display_name' => 'required|unique:roles',
+			 	'description' => 'required'
+			]);	
+		$input = $request->all();
+		$role = Role::find($id);
+		$role->update($input);
+
+		return redirect('auth/role')->with('success','Sucessfully');
+	}
+
+	//function Role Show
+	public function roleShow($id)
+	{
+		 $roles = Role::find($id);
+        return view('auth/roleshow',compact('roles'));
+	}
+	//function user show
+	public function userShow($id)
+	{
+		$users = User::find($id);
+		return view('auth/usershow',compact('users'));
+	}
+		
 }

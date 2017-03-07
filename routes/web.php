@@ -49,7 +49,8 @@ Route::group(['middleware' => 'auth'], function ()
 	    Route::post('/userupdate/{id}', 'UserController@userUpdate');
 
 	    Route::get('/roleedit/{id}', 'UserController@roleEdit');
-	    Route::post('/roleudate/{id}', 'UserController@roleudate');
+	    Route::post('/roleupdate/{id}', 'UserController@roleUpdate');
+	    Route::get('/roleshow/{id}','UserController@roleShow');
 
 	});
 });
