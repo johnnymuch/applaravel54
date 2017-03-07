@@ -17,14 +17,14 @@
 					<th>Action</th>
 				</tr>
 				@php $i = 1; @endphp
-				@foreach($users as $select)
+				@foreach($users as $user)
 					<tr>
 						<th>{{$i++}}</th>
-						<th>{{$select->name}}</th>
-						<th>{{$select->email}}</th>
+						<th>{{$user->name}}</th>
+						<th>{{$user->email}}</th>
 						<th>
-							<a class="btn btn-sm btn-success"><i class="glyphicon glyphicon-edit"></i></a>
 							<a class="btn btn-sm btn-info"><i class="glyphicon glyphicon-eye-open"></i></a>
+							<a class="btn btn-sm btn-success" href="{{ url('auth/useredit'.'/'.$user->id) }}"><i class="glyphicon glyphicon-edit"></i></a>
 							<a class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
 						</th>
 					</tr>

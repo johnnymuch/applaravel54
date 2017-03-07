@@ -28,7 +28,6 @@
 							        <small class="text-danger">{{ $errors->first('password') }}</small>
 								
 							</div>
-
 							{!! Form::submit('Save', ['class' => 'btn btn-info pull-right']) !!}
 						{!! Form::close() !!}
 					</div>

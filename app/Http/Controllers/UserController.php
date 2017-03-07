@@ -84,4 +84,65 @@ class UserController extends Controller
 		return redirect('/auth/permission')->with('sucess','Sucessfully');
 	}
 	//end persmission create
+
+	public function permissionShow($id)
+	{
+		 $permissions = Permission::find($id);
+        return view('auth.permissionshow',compact('permissions'));
+	}
+
+	public function permissionEdit($id)
+	{
+		$permissions = Permission::find($id);
+        return view('auth.permissionupdate',compact('permissions'));
+	}
+
+	public function permissionUpdate(Request $request, $id)
+	{
+		$this->validate($request, [
+				'name' => 'required|unique:permissions',
+				'display_name' => 'required',
+				'description' => 'required|unique:permissions'
+			]);
+		$input = $request->all();
+		$permission = Permission::find($id);
+		$permission->update($input);
+
+		return redirect('auth/permission')->with('success','Permission update Sucessfully');
+	}
+
+
+	// update use
+	public function userEdit($id)
+	{
+		$users = User::find($id);
+        return view('auth.userupdate',compact('users'));
+	}
+	public function userUpdate(Request $request, $id)
+	{
+		$this->validate($request, [
+				'name' => 'required|unique:users',
+				'email' => 'required:unique:users',
+				'password' => 'required'
+			]);
+		$input = $request->all();
+		  if(!empty($input['password'])){ 
+            $input['password'] = Hash::make($input['password']);
+		        }else{
+		            $input = array_except($input,array('password'));    
+		        }
+
+        $user = User::find($id);
+		$user->update($input);
+
+		return redirect('auth/index')->with('success','User updated successfully');
+	}
+
+	// update role function
+	public function roleEdit($id)
+	{
+		$roles = Role::find($id);
+		return view('auth.roleupdate',compact('roles'));
+	}
+	
 }

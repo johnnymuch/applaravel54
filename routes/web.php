@@ -38,6 +38,18 @@ Route::group(['middleware' => 'auth'], function ()
 	    Route::post('/rolestore', 'UserController@roleStore');
 
 	    Route::get('/permissioncreate', 'UserController@permissionCreate');   
-	    Route::get('/permissionstore', 'UserController@permissionStore');   
+	    Route::post('/permissionstore', 'UserController@permissionStore');  
+
+	    Route::get('/permissionshow/{id}','UserController@permissionShow'); 
+
+	    Route::get('/permissionedit/{id}','UserController@permissionEdit');
+	    Route::post('/permissionupdate/{id}','UserController@permissionUpdate');
+
+	    Route::get('/useredit/{id}', 'UserController@userEdit');
+	    Route::post('/userupdate/{id}', 'UserController@userUpdate');
+
+	    Route::get('/roleedit/{id}', 'UserController@roleEdit');
+	    Route::post('/roleudate/{id}', 'UserController@roleudate');
+
 	});
 });

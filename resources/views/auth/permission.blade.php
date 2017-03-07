@@ -2,7 +2,12 @@
 @section('content')
 	<div class="container">
 		<div class="row">
-			<h2>User Permission</h2>
+			<div class="pull-left">
+				<h2>User Permission</h2>
+			</div>
+			<div class="pull-right">
+				<h2><a href="{{ url('auth/permissioncreate') }}">Create New Permission</a></h2>
+			</div>
 			<table class="table table-striped">
 				<tr>
 					<th>ID</th>
@@ -17,8 +22,8 @@
 						<th>{{$permission->name}}</th>
 						<th>{{$permission->display_name}}</th>
 						<th>
-							<a class="btn btn-sm btn-info"><i class="glyphicon glyphicon-eye-open"></i></a>
-							<a class="btn btn-sm btn-success"><i class="glyphicon glyphicon-edit"></i></a>				
+							<a class="btn btn-sm btn-info" href="{{ url('auth/permissionshow'.'/'.$permission->id) }}"><i class="glyphicon glyphicon-eye-open"></i></a>
+							<a class="btn btn-sm btn-success" href="{{ url('auth/permissionedit'.'/'.$permission->id) }}"><i class="glyphicon glyphicon-edit"></i></a>				
 							<a class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i></a>
 						</th>
 					</tr>
