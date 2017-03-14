@@ -179,6 +179,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 	    Zizaco\Entrust\EntrustServiceProvider::class,
+        Evercode1\TraitMaker\TraitMakerServiceProvider::class,
 
     ],
 
@@ -230,9 +231,10 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
 		'Ntrust' => Klaravel\Ntrust\NtrustFacade::class,
-		'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+		'Entrust' => Zizaco\Entrust\EntrustFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Uuid' => Webpatser\Uuid\Uuid::class,
     ],
 
 ];

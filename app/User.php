@@ -33,4 +33,11 @@ class User extends Authenticatable
 	protected static $roleProfile = 'users';
 
     protected $table ='users';
+
+    /**
+ * Indicates if the IDs are auto-incrementing.
+ *
+ * @var bool
+ */
+    public $incrementing = false;
 }
