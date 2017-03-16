@@ -169,6 +169,7 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         Klaravel\Ntrust\NtrustServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+		SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -234,7 +235,11 @@ return [
 		'Entrust' => Zizaco\Entrust\EntrustFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+<<<<<<< HEAD
         'Uuid' => Webpatser\Uuid\Uuid::class,
+=======
+	    'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+>>>>>>> features-johnny
     ],
 
 ];

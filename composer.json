@@ -10,8 +10,13 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4",
+<<<<<<< HEAD
         "webpatser/laravel-uuid": "2.*",
         "zizaco/entrust": "5.2.x-dev"
+=======
+        "zizaco/entrust": "5.2.x-dev",
+		"simplesoftwareio/simple-qrcode": "~1"
+>>>>>>> features-johnny
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
