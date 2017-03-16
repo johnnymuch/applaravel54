@@ -7,6 +7,7 @@ use App\User;
 use App\Role;
 use App\Permission;
 use Hash;
+use SimpleSoftwareIO\QrCode\BaconQrCodeGenerator;
 
 class UserController extends Controller
 {
@@ -35,7 +36,7 @@ class UserController extends Controller
 	//function create & store	
 	public function userCreate()
 	{
-		return view("auth.usercreate");
+		return view('auth.usercreate');
 	}
 	public function userStore(Request $request)
 	{
