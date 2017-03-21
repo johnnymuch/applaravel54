@@ -14,6 +14,7 @@
 					<th>ID</th>
 					<th>Name</th>
 					<th>Email</th>
+					<th>QR CODE</th>
 					<th>Action</th>
 				</tr>
 				@php $i = 1; @endphp
@@ -22,6 +23,7 @@
 						<th>{{$i++}}</th>
 						<th>{{$user->name}}</th>
 						<th>{{$user->email}}</th>
+						<th>Code</th>
 						<th>
 							<a class="btn btn-sm btn-info"><i class="glyphicon glyphicon-eye-open"></i></a>
 							<a class="btn btn-sm btn-success" href="{{ url('auth/useredit'.'/'.$user->id) }}"><i class="glyphicon glyphicon-edit"></i></a>
