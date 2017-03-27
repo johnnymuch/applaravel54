@@ -170,6 +170,7 @@ return [
         Klaravel\Ntrust\NtrustServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 		SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+		Zizaco\Entrust\EntrustServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -235,11 +236,6 @@ return [
 		'Entrust' => Zizaco\Entrust\EntrustFacade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-<<<<<<< HEAD
-        'Uuid' => Webpatser\Uuid\Uuid::class,
-=======
-	    'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
->>>>>>> features-johnny
-    ],
+		'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
 
 ];
