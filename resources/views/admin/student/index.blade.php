@@ -1,9 +1,9 @@
 
-@extends('layouts.app')
+@extends('header.app')
 
 @section('content')
 <div id="apps">
-    <nav class="navbar navbar-default">
+    <nav class="navbar">
         <div class="container-fluid">
             <div class="col-md-12">
                 <div class="col-md-2">

@@ -19,7 +19,6 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
-
     /**
      * The application's route middleware groups.
      *
@@ -35,13 +34,11 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
-
         'api' => [
             'throttle:60,1',
             'bindings',
         ],
     ];
-
     /**
      * The application's route middleware.
      *
@@ -56,10 +53,5 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'simpleauth' => 'App\Http\Middleware\SimpleAuthMiddleware',
-		//
-		'role' => \Klaravel\Ntrust\Middleware\NtrustRole::class,
-		'permission' => \Klaravel\Ntrust\Middleware\NtrustPermission::class,
-		'ability' => \Klaravel\Ntrust\Middleware\NtrustAbility::class,
     ];
 }
