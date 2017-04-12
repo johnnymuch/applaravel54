@@ -169,8 +169,7 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         Klaravel\Ntrust\NtrustServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-		SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
-		Zizaco\Entrust\EntrustServiceProvider::class,
+		
 
         /*
          * Application Service Providers...
@@ -232,10 +231,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-		'Ntrust' => Klaravel\Ntrust\NtrustFacade::class,
-		'Entrust' => Zizaco\Entrust\EntrustFacade::class,
+		
+		
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
-		'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+		
 
 ];
